@@ -1,6 +1,6 @@
 {
    "name": "bloop-nfc-scanner",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "description": "Bloop NFC Scanner Browser SDK",
    "author": "Ben Scholzen 'DASPRiD' <mail@dasprids.de>",
    "license": "BSD-2-Clause",
@@ -9,7 +9,9 @@
       "url": "https://github.com/bloop-box/nfc-scanner-client-browser.git"
    },
    "type": "module",
-   "files": ["dist"],
+   "files": [
+      "dist"
+   ],
    "main": "./dist/bloop-nfc-scanner.umd.cjs",
    "module": "./dist/bloop-nfc-scanner.js",
    "types": "./dist/index.d.ts",
