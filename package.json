@@ -9,6 +9,7 @@
       "url": "https://github.com/bloop-box/nfc-scanner-client-browser.git"
    },
    "type": "module",
+   "files": ["dist"],
    "main": "./dist/bloop-nfc-scanner.umd.cjs",
    "module": "./dist/bloop-nfc-scanner.js",
    "types": "./dist/index.d.ts",
