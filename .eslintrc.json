@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "eslint-config-dasprid"
+    ],
+    "parserOptions": {
+        "project": "tsconfig.eslint.json"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    }
+}

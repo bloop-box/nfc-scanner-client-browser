@@ -1,0 +1,51 @@
+{
+   "name": "bloop-nfc-scanner",
+   "version": "1.0.0",
+   "description": "Bloop NFC Scanner Browser SDK",
+   "author": "Ben Scholzen 'DASPRiD' <mail@dasprids.de>",
+   "license": "BSD-2-Clause",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/bloop-box/nfc-scanner-client-browser.git"
+   },
+   "type": "module",
+   "main": "./dist/bloop-nfc-scanner.umd.cjs",
+   "module": "./dist/bloop-nfc-scanner.js",
+   "types": "./dist/index.d.ts",
+   "exports": {
+      ".": {
+         "import": "./dist/bloop-nfc-scanner.js",
+         "require": "./dist/bloop-nfc-scanner.umd.cjs",
+         "types": "./dist/index.d.ts"
+      }
+   },
+   "devDependencies": {
+      "@commitlint/cli": "^17.5.0",
+      "@commitlint/config-conventional": "^17.4.4",
+      "@rollup/plugin-typescript": "^11.0.0",
+      "@tsconfig/vite-react": "^1.0.1",
+      "@types/node": "^18.15.11",
+      "@vitest/coverage-c8": "^0.29.8",
+      "eslint": "^8.10.0",
+      "eslint-config-dasprid": "^0.1.8",
+      "husky": "^8.0.3",
+      "jsdom": "^21.1.1",
+      "lint-staged": "^13.2.0",
+      "typescript": "^5.0.2",
+      "vite": "^4.2.1",
+      "vite-plugin-dts": "^2.1.0",
+      "vitest": "^0.29.8"
+   },
+   "scripts": {
+      "start": "vite",
+      "test": "vitest",
+      "coverage": "vitest run --coverage",
+      "build": "tsc && vite build",
+      "preview": "vite preview",
+      "lint": "eslint .",
+      "prepare": "husky install"
+   },
+   "lint-staged": {
+      "*.ts": "eslint --cache --fix"
+   }
+}
