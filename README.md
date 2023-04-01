@@ -1,6 +1,7 @@
 # Bloop NFC Scanner Browser SDK
 
 [![Release](https://github.com/bloop-box/nfc-scanner-client-browser/actions/workflows/release.yml/badge.svg)](https://github.com/bloop-box/nfc-scanner-client-browser/actions/workflows/release.yml)
+[![codecov](https://codecov.io/gh/bloop-box/nfc-scanner-client-browser/branch/main/graph/badge.svg?token=QDHPVXT7B5)](https://codecov.io/gh/bloop-box/nfc-scanner-client-browser)
 
 SDK to ease the integration of the Bloop NFC Scanner into browser applications.
 
