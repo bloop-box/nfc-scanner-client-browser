@@ -4,7 +4,7 @@ export type UnregisterUidCapture = () => void;
 
 type Handler = [callback : UidCaptureCallback, errorHandler ?: UidCaptureErrorHandler];
 
-const allowedKeys = /^[a-fA-F0-9]$/;
+const keyCodeRegex = /^(?:Key|Digit)([A-F0-9])$/;
 const registeredHandlers = new Set<Handler>();
 let keydownHandler : (event : KeyboardEvent) => void;
 
@@ -37,7 +37,7 @@ export const registerUidCapture = (
     let timeout : number;
 
     keydownHandler = (event : KeyboardEvent) => {
-        if (event.altKey && event.ctrlKey && event.shiftKey && event.key === 'U') {
+        if (event.altKey && event.ctrlKey && event.shiftKey && event.code === 'KeyU') {
             capturing = true;
             uid = '';
             event.preventDefault();
@@ -56,7 +56,7 @@ export const registerUidCapture = (
         event.preventDefault();
         event.stopPropagation();
 
-        if (event.altKey && event.ctrlKey && event.shiftKey && event.key === 'D') {
+        if (event.altKey && event.ctrlKey && event.shiftKey && event.code === 'KeyD') {
             capturing = false;
             window.clearTimeout(timeout);
 
@@ -76,11 +76,13 @@ export const registerUidCapture = (
             return;
         }
 
-        if (!allowedKeys.test(event.key)) {
+        const matchResult = keyCodeRegex.exec(event.code);
+
+        if (!matchResult) {
             return;
         }
 
-        uid += event.key;
+        uid += matchResult[1];
     };
 
     window.addEventListener('keydown', keydownHandler, {capture: true});
