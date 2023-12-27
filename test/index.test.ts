@@ -1,14 +1,14 @@
 import {describe, expect, it, vi} from 'vitest';
 import {AbortError, captureUid, registerUidCapture} from '../src/index.js';
 
-const startEvent = new KeyboardEvent('keydown', {altKey: true, shiftKey: true, ctrlKey: true, key: 'U'});
-const endEvent = new KeyboardEvent('keydown', {altKey: true, shiftKey: true, ctrlKey: true, key: 'D'});
+const startEvent = new KeyboardEvent('keydown', {altKey: true, shiftKey: true, ctrlKey: true, code: 'KeyU'});
+const endEvent = new KeyboardEvent('keydown', {altKey: true, shiftKey: true, ctrlKey: true, code: 'KeyD'});
 
 const sendUid = (uid : string) => {
     window.dispatchEvent(startEvent);
 
     for (const char of uid) {
-        window.dispatchEvent(new KeyboardEvent('keydown', {key: char}));
+        window.dispatchEvent(new KeyboardEvent('keydown', {code: `Key${char.toUpperCase()}`}));
     }
 
     window.dispatchEvent(endEvent);
@@ -106,7 +106,7 @@ describe('register', () => {
         vi.advanceTimersByTime(1000);
 
         for (const char of 'aabbccdd') {
-            window.dispatchEvent(new KeyboardEvent('keydown', {key: char}));
+            window.dispatchEvent(new KeyboardEvent('keydown', {code: `Key${char.toUpperCase()}`}));
         }
 
         window.dispatchEvent(endEvent);
