@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/bloop-box/nfc-scanner-client-browser/compare/v1.0.1...v1.0.2) (2023-12-27)
+
+
+### Bug Fixes
+
+* detect key presses via key code instead of localized key ([01a4845](https://github.com/bloop-box/nfc-scanner-client-browser/commit/01a4845e8a87acc31057dcd3947e5e15eff10141))
+
 ## [1.0.1](https://github.com/bloop-box/nfc-scanner-client-browser/compare/v1.0.0...v1.0.1) (2023-04-01)
 
 
