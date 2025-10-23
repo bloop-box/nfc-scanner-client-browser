@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bloop-box/nfc-scanner-client-browser/compare/v1.0.2...v1.0.3) (2025-10-23)
+
+
+### Bug Fixes
+
+* add provenance attestation ([fb6c8eb](https://github.com/bloop-box/nfc-scanner-client-browser/commit/fb6c8ebab9e37af7db1c4c7d937a1ac744ad1769))
+
 ## [1.0.2](https://github.com/bloop-box/nfc-scanner-client-browser/compare/v1.0.1...v1.0.2) (2023-12-27)
 
 

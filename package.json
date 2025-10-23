@@ -1,6 +1,6 @@
 {
    "name": "bloop-nfc-scanner",
-   "version": "1.0.2",
+   "version": "1.0.3",
    "description": "Bloop NFC Scanner Browser SDK",
    "author": "Ben Scholzen 'DASPRiD' <mail@dasprids.de>",
    "license": "BSD-2-Clause",
