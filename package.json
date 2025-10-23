@@ -6,7 +6,7 @@
    "license": "BSD-2-Clause",
    "repository": {
       "type": "git",
-      "url": "https://github.com/bloop-box/nfc-scanner-client-browser.git"
+      "url": "git+https://github.com/bloop-box/nfc-scanner-client-browser.git"
    },
    "type": "module",
    "files": [
